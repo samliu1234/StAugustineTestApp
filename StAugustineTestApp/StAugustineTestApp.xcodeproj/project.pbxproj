@@ -16,6 +16,11 @@
 		34566C2D254337F100D1156E /* StAugustineTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C2C254337F100D1156E /* StAugustineTestAppTests.swift */; };
 		34566C38254337F100D1156E /* StAugustineTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C37254337F100D1156E /* StAugustineTestAppUITests.swift */; };
 		34566C492543382D00D1156E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C482543382D00D1156E /* HomePageView.swift */; };
+		349D182B254628C400AE981F /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D182A254628C400AE981F /* AccountView.swift */; };
+		349D18302546295500AE981F /* CafeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D182F2546295500AE981F /* CafeMenuView.swift */; };
+		349D1835254629FD00AE981F /* SongRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D1834254629FD00AE981F /* SongRequestView.swift */; };
+		349D183A25462A4900AE981F /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D183925462A4900AE981F /* SocialView.swift */; };
+		349D184725462B8F00AE981F /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D184625462B8F00AE981F /* TabsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		34566C37254337F100D1156E /* StAugustineTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StAugustineTestAppUITests.swift; sourceTree = "<group>"; };
 		34566C39254337F100D1156E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34566C482543382D00D1156E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		349D182A254628C400AE981F /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		349D182F2546295500AE981F /* CafeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeMenuView.swift; sourceTree = "<group>"; };
+		349D1834254629FD00AE981F /* SongRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestView.swift; sourceTree = "<group>"; };
+		349D183925462A4900AE981F /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		349D184625462B8F00AE981F /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,11 @@
 				34566C15254337F000D1156E /* StAugustineTestAppApp.swift */,
 				34566C17254337F000D1156E /* ContentView.swift */,
 				34566C482543382D00D1156E /* HomePageView.swift */,
+				349D184625462B8F00AE981F /* TabsView.swift */,
+				349D183925462A4900AE981F /* SocialView.swift */,
+				349D1834254629FD00AE981F /* SongRequestView.swift */,
+				349D182F2546295500AE981F /* CafeMenuView.swift */,
+				349D182A254628C400AE981F /* AccountView.swift */,
 				34566C19254337F100D1156E /* Assets.xcassets */,
 				34566C1E254337F100D1156E /* Persistence.swift */,
 				34566C23254337F100D1156E /* Info.plist */,
@@ -268,8 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349D182B254628C400AE981F /* AccountView.swift in Sources */,
 				34566C22254337F100D1156E /* StAugustineTestApp.xcdatamodeld in Sources */,
 				34566C1F254337F100D1156E /* Persistence.swift in Sources */,
+				349D1835254629FD00AE981F /* SongRequestView.swift in Sources */,
+				349D184725462B8F00AE981F /* TabsView.swift in Sources */,
+				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
+				349D183A25462A4900AE981F /* SocialView.swift in Sources */,
 				34566C18254337F000D1156E /* ContentView.swift in Sources */,
 				34566C16254337F000D1156E /* StAugustineTestAppApp.swift in Sources */,
 				34566C492543382D00D1156E /* HomePageView.swift in Sources */,
