@@ -14,7 +14,7 @@ struct ColorManager {
 struct TabsView: View {
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color("Primary Color"))
+        UITabBar.appearance().backgroundColor = UIColor(Color("primary color"))
         
     }
     
