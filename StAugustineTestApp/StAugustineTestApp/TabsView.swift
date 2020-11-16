@@ -13,8 +13,11 @@ struct ColorManager {
 
 struct TabsView: View {
     
+    @EnvironmentObject var database: Database
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor(Color("primary color"))
+        //self.database.getCafeMenu()
         
     }
     
