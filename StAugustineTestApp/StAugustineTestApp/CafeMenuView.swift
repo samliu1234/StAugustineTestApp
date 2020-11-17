@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct CafeMenuView: View {
     var body: some View {
-        Text("Cafe Menu")
+        
+        Text("Cafe menu")
+        
     }
 }
 
