@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     
-    @EnvironmentObject var database: Database
+    // @EnvironmentObject var database: Database
     
     var pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     

@@ -11,7 +11,7 @@ import SwiftUI
 struct StAugustineTestAppApp: App {
     let persistenceController = PersistenceController.shared
     
-    @StateObject private var database = Database()
+    // @StateObject private var database = Database()
     
     var body: some Scene {
         WindowGroup {
