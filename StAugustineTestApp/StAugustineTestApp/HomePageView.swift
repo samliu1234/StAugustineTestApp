@@ -11,7 +11,8 @@ struct HomePageView: View {
     
     // @EnvironmentObject var database: Database
     
-    var pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
+    let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
+    let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     
     var body: some View {
         
@@ -50,9 +51,13 @@ struct HomePageView: View {
                 
                 // Properties for welcome block
                 .padding(.all, 25)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(yColor, lineWidth: 8)
+                )
                 .background(pColor)
                 .cornerRadius(20)
-                .padding(.all)
+                .padding(.all, 25)
                 
                 
                 // MARK: Announcemnts board
@@ -98,8 +103,8 @@ struct HomePageView: View {
                 .padding(.all, 25)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 1))
-                .padding(.all)
+                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                .padding(.all, 25)
                 
                 
                 // MARK: Cafe items
@@ -166,8 +171,8 @@ struct HomePageView: View {
                 .padding(.all, 25)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 1))
-                .padding(.all)
+                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                .padding(.all, 25)
                 
             }
             .onAppear {
