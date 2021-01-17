@@ -51,7 +51,7 @@ struct SongRequestView: View {
                 
             }
             
-            // MARK: Song requests
+            // MARK: Add song and song request
             VStack(alignment: .leading, spacing: 20) {
                 
                 // Add song button
@@ -76,50 +76,43 @@ struct SongRequestView: View {
                     
                 })
                 
-                // Song request
-                HStack {
+                // MARK: Individual song request
+                
+                GeometryReader { geometry in
+                
+                    // Song request
+                    HStack(spacing: 0) {
                     
-                    Spacer()
-                    
-                    Button(action: {
-                        print("up clicked")
-                    }, label: {
+                        Button(action: {
+                            print("up clicked")
+                        }, label: {
+                            
+                            VStack {
+                                Image(systemName: "chevron.up")
+                                    .foregroundColor(.white)
+                                    .padding(.bottom, 7)
+                                Text("37")
+                                    .foregroundColor(.white)
+                            }
+                        })
+                        .frame(width: 0.3 * geometry.size.width)
                         
-                        VStack {
-                            Image(systemName: "chevron.up")
-                                .foregroundColor(.white)
-                                .padding(.bottom, 7)
-                            Text("37")
-                                .foregroundColor(.white)
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("What Makes You Beautiful")
+                                .font(.system(size: 13))
+                                .bold()
+                                .foregroundColor(pColor)
+                            Text("By: One Direction")
+                                .font(.system(size: 10))
+                                .font(.body)
+                                .foregroundColor(pColor)
                         }
-                    })
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("What Makes You Beautiful")
-                            .font(.system(size: 13))
-                            .bold()
-                            .foregroundColor(pColor)
-                        Text("By: One Direction")
-                            .font(.system(size: 10))
-                            .font(.body)
-                            .foregroundColor(pColor)
+                        .frame(width: 0.7 * geometry.size.width)
+                        
                     }
                     
-                    .padding(.all)
-                    .background(Color.white).cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(pColor, lineWidth: 2))
-                    
                 }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(pColor, lineWidth: 2))
-                .background(pColor).cornerRadius(10)
-                
-                
+
             }
             
             // Properties for song requests
