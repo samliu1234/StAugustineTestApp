@@ -110,6 +110,7 @@ struct SongRequestView: View {
                         .frame(width: 0.7 * geometry.size.width)
                         
                     }
+                    .background(pColor)
                     
                 }
 
