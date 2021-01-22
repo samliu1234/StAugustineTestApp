@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		349D1835254629FD00AE981F /* SongRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D1834254629FD00AE981F /* SongRequestView.swift */; };
 		349D183A25462A4900AE981F /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D183925462A4900AE981F /* SocialView.swift */; };
 		349D184725462B8F00AE981F /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D184625462B8F00AE981F /* TabsView.swift */; };
+		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		349D1834254629FD00AE981F /* SongRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestView.swift; sourceTree = "<group>"; };
 		349D183925462A4900AE981F /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		349D184625462B8F00AE981F /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				349D184625462B8F00AE981F /* TabsView.swift */,
 				349D183925462A4900AE981F /* SocialView.swift */,
 				349D1834254629FD00AE981F /* SongRequestView.swift */,
+				5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */,
 				349D182F2546295500AE981F /* CafeMenuView.swift */,
 				349D182A254628C400AE981F /* AccountView.swift */,
 				34566C1E254337F100D1156E /* Persistence.swift */,
@@ -304,6 +307,7 @@
 				349D182B254628C400AE981F /* AccountView.swift in Sources */,
 				34566C22254337F100D1156E /* StAugustineTestApp.xcdatamodeld in Sources */,
 				34566C1F254337F100D1156E /* Persistence.swift in Sources */,
+				5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */,
 				349D1835254629FD00AE981F /* SongRequestView.swift in Sources */,
 				349D184725462B8F00AE981F /* TabsView.swift in Sources */,
 				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
