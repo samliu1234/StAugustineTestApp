@@ -12,6 +12,7 @@ struct SongRequestObject: View {
     @Binding var songName:String
     @Binding var songAuthor:String
     @Binding var votes:Int
+    @Binding var highlight: Bool
     
     var body: some View {
         
@@ -20,17 +21,25 @@ struct SongRequestObject: View {
         GeometryReader { geometry in
         
             // Song request
-            HStack {
+            HStack (spacing: 0) {
             
                 Button(action: {
                     print("up clicked")
                 }, label: {
                     
                     VStack(spacing: 0) {
-                        Image(systemName: "chevron.up")
-                            .foregroundColor(.white)
-                            .padding(.bottom, 8)
-                            .font(.system(size: 10))
+                        if highlight {
+                            Image(systemName: "chevron.up")
+                                .foregroundColor(.yellow)
+                                .padding(.bottom, 8)
+                                .font(.system(size: 10))
+                        }
+                        else {
+                            Image(systemName: "chevron.up")
+                                .foregroundColor(.white)
+                                .padding(.bottom, 8)
+                                .font(.system(size: 10))
+                        }
                         Text(String(votes))
                             .foregroundColor(.white)
                             .font(.system(size: 15))
@@ -44,10 +53,14 @@ struct SongRequestObject: View {
                         .font(.system(size: 10))
                         .bold()
                         .foregroundColor(pColor)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 15)
                     Text(songAuthor)
                         .font(.system(size: 8))
                         .font(.body)
                         .foregroundColor(pColor)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 15)
                 }
                 .frame(width: 0.75 * geometry.size.width)
                 .padding(.vertical, 15)
@@ -68,12 +81,13 @@ struct SongRequestObject: View {
         
             
         }
+        .frame(height: 62) // Super important to set the height of the GeometryReader
         
     }
 }
 
 struct SongRequestObject_Previews: PreviewProvider {
     static var previews: some View {
-        SongRequestObject(songName: Binding.constant("Wrecking Ball"), songAuthor: Binding.constant("Miley Cyrus"), votes: Binding.constant(37))
+        SongRequestObject(songName: Binding.constant("Wrecking Ball"), songAuthor: Binding.constant("Miley Cyrus"), votes: Binding.constant(37), highlight: Binding.constant(true))
     }
 }

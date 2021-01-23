@@ -15,8 +15,10 @@ struct SongRequestView: View {
     @State var songNames = ["What Makes You Beautiful", "Wrecking Ball", "Heart Attack"]
     @State var songAuthors = ["One Direction", "Miley Cyrus", "Demi Lovato"]
     @State var votes = [55, 43, 21]
+    @State var clicked = [false, true, false]
     
     var body: some View {
+        // If it says failed to produce diagnostic, that probably means there's a problem with passing state parameters as bindings
         
         ScrollView {
             VStack {
@@ -69,11 +71,11 @@ struct SongRequestView: View {
                     })
                     
                     // MARK: Individual song requests
-                    SongRequestObject(songName: $songNames[0], songAuthor: $songAuthors[0], votes: $votes[0])
+                    SongRequestObject(songName: $songNames[0], songAuthor: $songAuthors[0], votes: $votes[0], highlight: $clicked[0])
+
+                    SongRequestObject(songName: $songNames[1], songAuthor: $songAuthors[1], votes: $votes[1], highlight: $clicked[1])
                     
-                    Spacer()
-                    Spacer()// Because geometry reader causes overlap
-                    SongRequestObject(songName: $songNames[1], songAuthor: $songAuthors[1], votes: $votes[1])
+                    SongRequestObject(songName: $songNames[2], songAuthor: $songAuthors[2], votes: $votes[2], highlight: $clicked[2])
                     
 
                 }
