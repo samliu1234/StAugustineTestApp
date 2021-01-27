@@ -12,11 +12,11 @@ struct SocialView: View {
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     
     var body: some View {
-        ScrollView {
+        GeometryReader { geometry in
             
-            GeometryReader { geometry in
+            ScrollView {
             
-                VStack(alignment: .leading, spacing: 30) {
+                VStack(alignment: .center, spacing: 30) {
                     
                     // MARK: Title
                     HStack {
@@ -45,14 +45,17 @@ struct SocialView: View {
                         Text("My clubs")
                             .foregroundColor(pColor)
                             .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         
                         Image(systemName: "heart.fill")
+                        
 
                         
                     }
                     // Properties for song requests
                     .frame(width: 0.7 * geometry.size.width, alignment: .center)
+                    .frame(height: 0.3 * geometry.size.width)
                     .padding(.all, 25)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
