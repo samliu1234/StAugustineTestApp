@@ -32,35 +32,40 @@ struct SongRequestObject: View {
                             Image(systemName: "chevron.up")
                                 .foregroundColor(.yellow)
                                 .padding(.bottom, 8)
-                                .font(.system(size: 10))
+                                .font(.system(size: 17))
                         }
                         else {
                             Image(systemName: "chevron.up")
                                 .foregroundColor(.white)
                                 .padding(.bottom, 8)
-                                .font(.system(size: 10))
+                                .font(.system(size: 17))
                         }
                         Text(String(votes))
                             .foregroundColor(.white)
-                            .font(.system(size: 15))
+                            .font(.system(size: 20))
                     }
                 })
                 .frame(width: 0.25 * geometry.size.width)
                 .padding(.vertical, 15)
                 
                 VStack(alignment: .leading, spacing: 10) {
+                    
                     Text(songName)
-                        .font(.system(size: 10))
+                        .font(.system(size: 15))
                         .bold()
                         .foregroundColor(pColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 15)
+                        .padding(.leading, 20)
+                        .padding(.top, 10)
+                    
                     Text(songAuthor)
-                        .font(.system(size: 8))
+                        .font(.system(size: 10))
                         .font(.body)
                         .foregroundColor(pColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 15)
+                        .padding(.leading, 20)
+                        .padding(.bottom, 10)
+                    
                 }
                 .frame(width: 0.75 * geometry.size.width)
                 .padding(.vertical, 15)
@@ -81,13 +86,13 @@ struct SongRequestObject: View {
         
             
         }
-        .frame(height: 62) // Super important to set the height of the GeometryReader
+        .frame(height: 90) // Super important to set the height of the GeometryReader
         
     }
 }
 
 struct SongRequestObject_Previews: PreviewProvider {
     static var previews: some View {
-        SongRequestObject(songName: Binding.constant("Wrecking Ball"), songAuthor: Binding.constant("Miley Cyrus"), votes: Binding.constant(37), highlight: Binding.constant(true))
+        SongRequestObject(songName: Binding.constant("What Makes You Beautiful"), songAuthor: Binding.constant("One Direction"), votes: Binding.constant(37), highlight: Binding.constant(true))
     }
 }

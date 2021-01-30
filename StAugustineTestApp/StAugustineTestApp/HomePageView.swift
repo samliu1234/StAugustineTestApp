@@ -17,7 +17,7 @@ struct HomePageView: View {
     @State var items = ["Pizza", "Burger", "Patty"]
     @State var costs = [3.75, 4.50, 2.00]
     @State var grades = [9, 10, 11, 12]
-    @State var percentages = [0.7, 0.6, 0.3, 1]
+    @State var percentages:[Double] = [0.7, 0.6, 0.3, 1]
     
     var body: some View {
         
@@ -66,7 +66,6 @@ struct HomePageView: View {
                         .background(pColor)
                         .cornerRadius(20)
                         .frame(width: geometry.size.width * 0.8)
-                        
                         
                         // MARK: Announcemnts board
                         VStack(spacing: 20) {
@@ -128,7 +127,7 @@ struct HomePageView: View {
                             HStack(spacing: 20) {
                                 
                                 CafeItem(item: $items[0], price: $costs[0])
-                                    .frame(width: geometry.size.width * 0.8 / 3)
+                                    //.frame(width: geometry.size.width * 0.3)
                                 CafeItem(item: $items[1], price: $costs[1])
                                 CafeItem(item: $items[2], price: $costs[2])
                              
@@ -153,10 +152,45 @@ struct HomePageView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom, 10)
                             
-                            SpiritBar(grade: $grades[0], percentage: $percentages[0])
-                            SpiritBar(grade: $grades[1], percentage: $percentages[1])
-                            SpiritBar(grade: $grades[2], percentage: $percentages[2])
-                            SpiritBar(grade: $grades[3], percentage: $percentages[3])
+                            HStack() {
+                                Text(String(9))
+                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .foregroundColor(pColor)
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width: geometry.size.width * 0.55 * 0.3, height: 10, alignment: .leading)
+                                    .foregroundColor(yColor)
+                                Spacer()
+                            }
+                            
+                            HStack() {
+                                Text(String(10))
+                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .foregroundColor(pColor)
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width: geometry.size.width * 0.55 * 0.6, height: 10, alignment: .leading)
+                                    .foregroundColor(yColor)
+                                Spacer()
+                            }
+                            
+                            HStack() {
+                                Text(String(11))
+                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .foregroundColor(pColor)
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width: geometry.size.width * 0.55 * 0.9, height: 10, alignment: .leading)
+                                    .foregroundColor(yColor)
+                                Spacer()
+                            }
+                            
+                            HStack() {
+                                Text(String(12))
+                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .foregroundColor(pColor)
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width: geometry.size.width * 0.55, height: 10, alignment: .leading)
+                                    .foregroundColor(yColor)
+                                Spacer()
+                            }
                             
                         }
                         
@@ -193,11 +227,10 @@ struct HomePageView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(pColor, lineWidth: 0.75))
                             
-                   
-                            
                         }
+                
                         
-                        // Properties for spirit meter
+                        // Properties for chaplaincy corner
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)

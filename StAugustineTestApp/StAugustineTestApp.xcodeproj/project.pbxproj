@@ -26,7 +26,6 @@
 		349D184725462B8F00AE981F /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D184625462B8F00AE981F /* TabsView.swift */; };
 		561FFD4F25C6032400D228E4 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FFD4E25C6032400D228E4 /* ClubView.swift */; };
 		565C311F25C0CDD200796043 /* CafeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C311E25C0CDD200796043 /* CafeItem.swift */; };
-		565C312425C0D4D100796043 /* SpiritBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C312325C0D4D100796043 /* SpiritBar.swift */; };
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +72,6 @@
 		349D184625462B8F00AE981F /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		561FFD4E25C6032400D228E4 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		565C311E25C0CDD200796043 /* CafeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeItem.swift; sourceTree = "<group>"; };
-		565C312325C0D4D100796043 /* SpiritBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritBar.swift; sourceTree = "<group>"; };
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +176,6 @@
 			children = (
 				5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */,
 				565C311E25C0CDD200796043 /* CafeItem.swift */,
-				565C312325C0D4D100796043 /* SpiritBar.swift */,
 				561FFD4E25C6032400D228E4 /* ClubView.swift */,
 			);
 			path = Objects;
@@ -330,7 +327,6 @@
 				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
 				565C311F25C0CDD200796043 /* CafeItem.swift in Sources */,
 				3498610225604AA0009ED45A /* Database.swift in Sources */,
-				565C312425C0D4D100796043 /* SpiritBar.swift in Sources */,
 				561FFD4F25C6032400D228E4 /* ClubView.swift in Sources */,
 				349D183A25462A4900AE981F /* SocialView.swift in Sources */,
 				349860FD25604959009ED45A /* Announcements.swift in Sources */,
