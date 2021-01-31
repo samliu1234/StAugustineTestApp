@@ -30,7 +30,7 @@ struct CafeMenuView: View {
         
         ScrollView {
             LazyVGrid(columns: layout, spacing: 20) {
-                ForEach(data, id: \.self) {item in
+                ForEach(data, id: \.self) { item in
                     VStack {
                         Image("burger")
                             .resizable()

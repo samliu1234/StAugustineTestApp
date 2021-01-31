@@ -11,10 +11,11 @@ struct CafeItem: View {
     @Binding var item:String
     @Binding var price:Double
     
+    let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
+    
     
     var body: some View {
-        
-        let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
+    
         
         VStack(alignment: .leading, spacing: 10) {
             
