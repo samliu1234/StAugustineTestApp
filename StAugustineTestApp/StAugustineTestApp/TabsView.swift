@@ -32,7 +32,7 @@ struct TabsView: View {
                     Text("Account")
                 }.tag(2)
             
-            CafeMenuView()
+            CafMenuTestView()
                 .tabItem {
                     Image(systemName: "moon")
                     Text("Cafe Menu")

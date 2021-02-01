@@ -31,18 +31,17 @@ struct CafeMenuView: View {
         ScrollView {
             LazyVGrid(columns: layout, spacing: 20) {
                 ForEach(data, id: \.self) { item in
-                    VStack {
-                        Image("burger")
-                            .resizable()
-                            .scaledToFit()
-                            .overlay(
-                                Text("burger").foregroundColor(.white), alignment: .bottomTrailing)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(pColor, lineWidth: 0.75))
-                    }
-                    .padding(.all)
-                    //.frame(width: 150, height: 350)
+                    Image("burger")
+                        .resizable()
+                        //.scaledToFit()
+                        .frame(width: 120, height: 175)
+                        .overlay(
+                            Text("burger").foregroundColor(.white), alignment: .bottomTrailing)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(pColor, lineWidth: 0.75))
+                        .padding(.trailing, 50)
+                  
                 }
             }
             .padding(.horizontal)
