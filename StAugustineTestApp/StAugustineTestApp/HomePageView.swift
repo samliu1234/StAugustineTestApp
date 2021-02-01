@@ -13,6 +13,7 @@ struct HomePageView: View {
     
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
+    let tmpColor = Color(red: 211/255, green: 211/255, blue: 211/255, opacity: 0.7)
     
     @State var items = ["Pizza", "Burger", "Patty"]
     @State var costs = [3.75, 4.50, 2.00]
@@ -93,7 +94,7 @@ struct HomePageView: View {
                                     .foregroundColor(pColor)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            .frame(width: geometry.size.width * 0.58)
+                            .frame(width: geometry.size.width * 0.62)
                             .padding(.all)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
@@ -110,7 +111,7 @@ struct HomePageView: View {
                                     .foregroundColor(pColor)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            .frame(width: geometry.size.width * 0.58)
+                            .frame(width: geometry.size.width * 0.62)
                             .padding(.all)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
@@ -138,10 +139,83 @@ struct HomePageView: View {
                             
                             HStack(spacing: 20) {
                                 
+                                /*
                                 CafeItem(item: $items[0], price: $costs[0])
                                     //.frame(width: geometry.size.width * 0.3)
                                 CafeItem(item: $items[1], price: $costs[1])
                                 CafeItem(item: $items[2], price: $costs[2])
+ */
+                                // MARK: Item 1
+                                ZStack {
+                                    
+                                    Image("rotini_pasta")
+                                        .resizable()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(pColor, lineWidth: 3)
+                                                .foregroundColor(.clear)
+                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                                                
+                                            )
+                                        .cornerRadius(10)
+                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                                        
+                                    
+                                    Text("Rotini Pasta")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .offset(y: geometry.size.height * 0.08)
+                                        .font(.system(size: 8))
+                                        
+                                }
+                                
+                                // MARK: Item 2
+                                ZStack {
+                                    
+                                    Image("fish")
+                                        .resizable()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(pColor, lineWidth: 3)
+                                                .foregroundColor(.clear)
+                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                                                
+                                            )
+                                        .cornerRadius(10)
+                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                                        
+                                    
+                                    Text("Fish")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .offset(y: geometry.size.height * 0.08)
+                                        .font(.system(size: 8))
+                                        
+                                }
+                                
+                                // MARK: Item 3
+                                ZStack {
+                                    
+                                    Image("chicken_legs")
+                                        .resizable()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(pColor, lineWidth: 3)
+                                                .foregroundColor(.clear)
+                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                                                
+                                            )
+                                        .cornerRadius(10)
+                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                                        
+                                    
+                                    Text("Chicken Legs")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .offset(y: geometry.size.height * 0.08)
+                                        .font(.system(size: 8))
+                                        
+                                }
                              
                             }
   

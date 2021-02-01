@@ -15,29 +15,37 @@ struct ClubView: View {
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     
     var body: some View {
-        ZStack {
-            
-            Image(imageName)
-                .resizable()
-                .cornerRadius(20)
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(pColor, lineWidth: 3)
-                )
-                .frame(height: 175)
-            
-            Rectangle()
-                .foregroundColor(.clear)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
-            
-            Text(clubName)
-                .foregroundColor(.white)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .offset(x: 25, y: 50)
-            
+        
+        GeometryReader { geometry in
+            ZStack {
+                
+                
+                Image(imageName)
+                    .resizable()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .foregroundColor(.clear)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                        )
+                    .cornerRadius(20)
+                    .background(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(pColor, lineWidth: 3)
+                    )
+                    .frame(height: 175)
+                    
+                
+                Text(clubName)
+                    .foregroundColor(.white)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .offset(x: 25, y: 50)
+                
+            }
         }
+        .frame(height: 175)
     }
+    
 }
 
 struct ClubView_Previews: PreviewProvider {
