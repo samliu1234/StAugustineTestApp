@@ -40,35 +40,41 @@ struct HomePageView: View {
                             VStack(alignment: .leading, spacing: 15) {
                                 
                                 Text("Welcome \nJohn Doe")
-                                    .font(.title)
+                                    .font(.title2)
                                     .bold()
                                     .foregroundColor(.white)
                                 
                                 Text("Saturday, November 12 \nCohort A")
-                                    .font(.subheadline)
+                                    //.font(.body)
                                     .foregroundColor(.white)
+                                    .font(.system(size: 13))
                                 
                             }
+                            
+                            Spacer()
+                            
                             // Sta logo
                             Image("stalogo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: geometry.size.width * 0.25)
+                                .frame(width: geometry.size.width * 0.2)
                                 .padding(.leading)
                             
                         }
                         // Properties for welcome block
+                        //.frame(width: geometry.size.width * 0.85)
                         .padding(.all, 25)
+                        .frame(width: geometry.size.width * 0.85)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(yColor, lineWidth: 8)
                         )
                         .background(pColor)
                         .cornerRadius(20)
-                        .frame(width: geometry.size.width * 0.8)
+                        
                         
                         // MARK: Announcemnts board
-                        VStack(spacing: 20) {
+                        VStack(alignment: .leading, spacing: 20) {
                             
                             Text("Announcements Board")
                                 .font(.title3)
@@ -77,33 +83,39 @@ struct HomePageView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom, 10)
                             
-                            VStack(alignment: .leading, spacing: 10) {
+                            VStack(spacing: 10) {
                                 Text("Yearbook")
                                     .bold()
                                     .foregroundColor(pColor)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 Text("Hi there, yearbook club here. How are y'all doing?")
                                     .font(.body)
                                     .foregroundColor(pColor)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            
+                            .frame(width: geometry.size.width * 0.58)
                             .padding(.all)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(pColor, lineWidth: 0.75))
                             
-                            VStack(alignment: .leading, spacing: 10) {
+                            
+                            VStack(spacing: 10) {
                                 Text("Basketball team")
                                     .bold()
                                     .foregroundColor(pColor)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 Text("Tryouts start tomorrow everyone! Come out and show us what you got!")
                                     .font(.body)
                                     .foregroundColor(pColor)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
                             }
-                            
+                            .frame(width: geometry.size.width * 0.58)
                             .padding(.all)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(pColor, lineWidth: 0.75))
+                            
                             
                         }
                         
@@ -112,7 +124,7 @@ struct HomePageView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
-                        .frame(width: geometry.size.width * 0.8)
+                        .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Cafe items
                         VStack {
@@ -140,7 +152,7 @@ struct HomePageView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
-                        .frame(width: geometry.size.width * 0.8)
+                        .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Spirit meter
                         VStack {
@@ -154,7 +166,7 @@ struct HomePageView: View {
                             
                             HStack() {
                                 Text(String(9))
-                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
                                     .foregroundColor(pColor)
                                 RoundedRectangle(cornerRadius: 30)
                                     .frame(width: geometry.size.width * 0.55 * 0.3, height: 10, alignment: .leading)
@@ -164,7 +176,7 @@ struct HomePageView: View {
                             
                             HStack() {
                                 Text(String(10))
-                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
                                     .foregroundColor(pColor)
                                 RoundedRectangle(cornerRadius: 30)
                                     .frame(width: geometry.size.width * 0.55 * 0.6, height: 10, alignment: .leading)
@@ -174,7 +186,7 @@ struct HomePageView: View {
                             
                             HStack() {
                                 Text(String(11))
-                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
                                     .foregroundColor(pColor)
                                 RoundedRectangle(cornerRadius: 30)
                                     .frame(width: geometry.size.width * 0.55 * 0.9, height: 10, alignment: .leading)
@@ -184,7 +196,7 @@ struct HomePageView: View {
                             
                             HStack() {
                                 Text(String(12))
-                                    .frame(idealWidth: 40, maxWidth: 40, alignment: .leading)
+                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
                                     .foregroundColor(pColor)
                                 RoundedRectangle(cornerRadius: 30)
                                     .frame(width: geometry.size.width * 0.55, height: 10, alignment: .leading)
@@ -199,7 +211,7 @@ struct HomePageView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
-                        .frame(width: geometry.size.width * 0.8)
+                        .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Chaplaincy corner
                         VStack(alignment: .leading, spacing: 20) {
@@ -235,7 +247,7 @@ struct HomePageView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
-                        .frame(width: geometry.size.width * 0.8)
+                        .frame(width: geometry.size.width * 0.85)
                         
                     }
                     Spacer()
