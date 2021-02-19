@@ -6,58 +6,62 @@
 //
 
 import SwiftUI
-/*
+
 struct ColorManager {
     static let pColor = Color("primaryColor")
-}*/
+}
 
 struct TabsView: View {
     
-    // @EnvironmentObject var database: Database
-    
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color("primary color"))
-        //self.database.getCafeMenu()
-        
-    }
-    
     @State var selection = 1
+    
+    let pColor = UIColor(red: 141/255, green: 18/255, blue: 48/255, alpha: 1)
+    let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
+    
+    // @EnvironmentObject var database: Database
+    init() {
+        UITabBar.appearance().barTintColor = pColor
+        //self.database.getCafeMenu()
+    }
     
     var body: some View {
         
         TabView(selection: $selection) {
-            AccountView()
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Account")
-                }.tag(2)
-            
-            CafMenuTestView()
-                .tabItem {
-                    Image(systemName: "moon")
-                    Text("Cafe Menu")
-                }.tag(3)
             
             HomePageView()
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Home")
+                        //.foregroundColor(.white)
+                    //RoundedRectangle(cornerRadius: 20)
                 }.tag(1)
+
+            CafMenuTestView()
+                .tabItem {
+                    Image("restaurant")
+                }.tag(2)
+            
+            AccountView()
+                .tabItem {
+                    Image("people")
+                }.tag(3)
             
             SongRequestView()
                 .tabItem {
-                    Image(systemName: "music.note.list")
-                    Text("Song Requests")
+                    Image("audio")
                 }.tag(4)
             
             SocialView()
                 .tabItem {
-                    Image(systemName: "person.3")
-                    Text("Social")
+                    Image(systemName: "person.fill")
+                        .foregroundColor(.white)
                 }.tag(5)
             
         }
+        .cornerRadius(20)
+        .accentColor(yColor)
+        .edgesIgnoringSafeArea(.all)
     }
+
 }
 
 struct TabsView_Previews: PreviewProvider {
