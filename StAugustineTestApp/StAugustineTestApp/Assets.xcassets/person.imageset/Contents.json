@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "round_person_white_18dp.png",
+      "filename" : "person-24px.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "person.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

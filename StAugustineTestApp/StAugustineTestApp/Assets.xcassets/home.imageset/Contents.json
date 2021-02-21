@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "round_home_white_18dp-1.png",
+      "filename" : "home-24px (1).svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "round_home_white_18dp.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

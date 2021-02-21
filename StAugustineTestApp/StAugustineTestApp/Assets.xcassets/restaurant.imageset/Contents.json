@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "round_restaurant_white_18dp-1.png",
+      "filename" : "restaurant-24px.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "round_restaurant_white_18dp.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

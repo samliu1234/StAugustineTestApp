@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "round_audiotrack_white_18dp.png",
+      "filename" : "music_note-24px.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "audio.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

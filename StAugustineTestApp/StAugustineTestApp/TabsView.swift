@@ -20,8 +20,11 @@ struct TabsView: View {
     
     // @EnvironmentObject var database: Database
     init() {
+        
         UITabBar.appearance().barTintColor = pColor
         //self.database.getCafeMenu()
+        UITabBar.appearance().unselectedItemTintColor = .white
+        
     }
     
     var body: some View {
@@ -30,36 +33,39 @@ struct TabsView: View {
             
             HomePageView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                        //.foregroundColor(.white)
-                    //RoundedRectangle(cornerRadius: 20)
+                    Image("home")
+                        .renderingMode(.template) // Allows for yellow highlight
                 }.tag(1)
 
             CafMenuTestView()
                 .tabItem {
                     Image("restaurant")
+                        .renderingMode(.template)
                 }.tag(2)
             
             AccountView()
                 .tabItem {
                     Image("people")
+                        .renderingMode(.template)
                 }.tag(3)
             
             SongRequestView()
                 .tabItem {
                     Image("audio")
+                        .renderingMode(.template)
                 }.tag(4)
             
             SocialView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                        .foregroundColor(.white)
+                    Image("person")
+                        .renderingMode(.template)
                 }.tag(5)
             
         }
         .cornerRadius(20)
         .accentColor(yColor)
         .edgesIgnoringSafeArea(.all)
+    
     }
 
 }
