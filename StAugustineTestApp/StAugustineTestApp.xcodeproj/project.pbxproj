@@ -29,6 +29,8 @@
 		561FFD4F25C6032400D228E4 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FFD4E25C6032400D228E4 /* ClubView.swift */; };
 		565C311F25C0CDD200796043 /* CafeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C311E25C0CDD200796043 /* CafeItem.swift */; };
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
+		56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31CA25E486D300ECF81D /* FAQViewObject.swift */; };
+		56DA31D325E4871200ECF81D /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31D225E4871200ECF81D /* FAQView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		561FFD4E25C6032400D228E4 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		565C311E25C0CDD200796043 /* CafeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeItem.swift; sourceTree = "<group>"; };
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
+		56DA31CA25E486D300ECF81D /* FAQViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewObject.swift; sourceTree = "<group>"; };
+		56DA31D225E4871200ECF81D /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				34566C23254337F100D1156E /* Info.plist */,
 				34566C20254337F100D1156E /* StAugustineTestApp.xcdatamodeld */,
 				34566C1B254337F100D1156E /* Preview Content */,
+				56DA31D225E4871200ECF81D /* FAQView.swift */,
 			);
 			path = StAugustineTestApp;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 		565C311A25C0CDA300796043 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				56DA31CA25E486D300ECF81D /* FAQViewObject.swift */,
 				5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */,
 				565C311E25C0CDD200796043 /* CafeItem.swift */,
 				561FFD4E25C6032400D228E4 /* ClubView.swift */,
@@ -332,7 +338,9 @@
 				349D1835254629FD00AE981F /* SongRequestView.swift in Sources */,
 				349D184725462B8F00AE981F /* TabsView.swift in Sources */,
 				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
+				56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */,
 				565C311F25C0CDD200796043 /* CafeItem.swift in Sources */,
+				56DA31D325E4871200ECF81D /* FAQView.swift in Sources */,
 				3498610225604AA0009ED45A /* Database.swift in Sources */,
 				561CFD6525C757FF008BBAA1 /* SettingsView.swift in Sources */,
 				561FFD4F25C6032400D228E4 /* ClubView.swift in Sources */,

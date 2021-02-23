@@ -62,7 +62,7 @@ struct TabsView: View {
                 }.tag(5)
             
         }
-        .cornerRadius(20)
+        // .cornerRadius(20)
         .accentColor(yColor)
         .edgesIgnoringSafeArea(.all)
     
