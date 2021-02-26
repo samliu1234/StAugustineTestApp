@@ -27,6 +27,7 @@
 		34E6E6A325C77FBC00BB5F72 /* CafMenuTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E6A225C77FBC00BB5F72 /* CafMenuTestView.swift */; };
 		561CFD6525C757FF008BBAA1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CFD6425C757FE008BBAA1 /* SettingsView.swift */; };
 		561FFD4F25C6032400D228E4 /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FFD4E25C6032400D228E4 /* ClubView.swift */; };
+		56389BEA25E9B319002B25B5 /* TitanTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56389BE925E9B319002B25B5 /* TitanTagView.swift */; };
 		565C311F25C0CDD200796043 /* CafeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C311E25C0CDD200796043 /* CafeItem.swift */; };
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 		56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31CA25E486D300ECF81D /* FAQViewObject.swift */; };
@@ -77,6 +78,7 @@
 		34E6E6A225C77FBC00BB5F72 /* CafMenuTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafMenuTestView.swift; sourceTree = "<group>"; };
 		561CFD6425C757FE008BBAA1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		561FFD4E25C6032400D228E4 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
+		56389BE925E9B319002B25B5 /* TitanTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitanTagView.swift; sourceTree = "<group>"; };
 		565C311E25C0CDD200796043 /* CafeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeItem.swift; sourceTree = "<group>"; };
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 		56DA31CA25E486D300ECF81D /* FAQViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewObject.swift; sourceTree = "<group>"; };
@@ -133,25 +135,26 @@
 			isa = PBXGroup;
 			children = (
 				565C311A25C0CDA300796043 /* Objects */,
-				34635D8F2560664D00D1AE0A /* GoogleService-Info.plist */,
-				34566C15254337F000D1156E /* StAugustineTestAppApp.swift */,
-				34566C17254337F000D1156E /* ContentView.swift */,
 				34566C19254337F100D1156E /* Assets.xcassets */,
-				34566C482543382D00D1156E /* HomePageView.swift */,
+				34635D8F2560664D00D1AE0A /* GoogleService-Info.plist */,
+				349D182A254628C400AE981F /* AccountView.swift */,
 				349860FC25604959009ED45A /* Announcements.swift */,
+				34E6E6A225C77FBC00BB5F72 /* CafMenuTestView.swift */,
+				349D182F2546295500AE981F /* CafeMenuView.swift */,
+				34566C17254337F000D1156E /* ContentView.swift */,
 				3498610125604AA0009ED45A /* Database.swift */,
-				349D184625462B8F00AE981F /* TabsView.swift */,
+				56DA31D225E4871200ECF81D /* FAQView.swift */,
+				34566C482543382D00D1156E /* HomePageView.swift */,
+				34566C1E254337F100D1156E /* Persistence.swift */,
 				561CFD6425C757FE008BBAA1 /* SettingsView.swift */,
 				349D183925462A4900AE981F /* SocialView.swift */,
 				349D1834254629FD00AE981F /* SongRequestView.swift */,
-				349D182F2546295500AE981F /* CafeMenuView.swift */,
-				34E6E6A225C77FBC00BB5F72 /* CafMenuTestView.swift */,
-				349D182A254628C400AE981F /* AccountView.swift */,
-				34566C1E254337F100D1156E /* Persistence.swift */,
+				34566C15254337F000D1156E /* StAugustineTestAppApp.swift */,
+				349D184625462B8F00AE981F /* TabsView.swift */,
+				56389BE925E9B319002B25B5 /* TitanTagView.swift */,
 				34566C23254337F100D1156E /* Info.plist */,
 				34566C20254337F100D1156E /* StAugustineTestApp.xcdatamodeld */,
 				34566C1B254337F100D1156E /* Preview Content */,
-				56DA31D225E4871200ECF81D /* FAQView.swift */,
 			);
 			path = StAugustineTestApp;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				349D1835254629FD00AE981F /* SongRequestView.swift in Sources */,
 				349D184725462B8F00AE981F /* TabsView.swift in Sources */,
 				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
+				56389BEA25E9B319002B25B5 /* TitanTagView.swift in Sources */,
 				56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */,
 				565C311F25C0CDD200796043 /* CafeItem.swift in Sources */,
 				56DA31D325E4871200ECF81D /* FAQView.swift in Sources */,

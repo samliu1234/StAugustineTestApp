@@ -18,7 +18,9 @@ struct HomePageView: View {
     @State var items = ["Pizza", "Burger", "Patty"]
     @State var costs = [3.75, 4.50, 2.00]
     @State var grades = [9, 10, 11, 12]
-    @State var percentages:[Double] = [0.7, 0.6, 0.3, 1]
+    @State var percentages = [0.7, 0.6, 0.3, 1]
+    
+    @Binding var selectionValue: Int
     
     var body: some View {
         
@@ -26,7 +28,6 @@ struct HomePageView: View {
         
         GeometryReader { geometry in
             
-        
             ScrollView {
                 HStack {
                     Spacer()
@@ -129,13 +130,30 @@ struct HomePageView: View {
                         
                         // MARK: Cafe items
                         VStack {
-                        
-                            Text("Featured Cafe Items")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(pColor)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.bottom, 10)
+                            
+                            HStack(alignment: .top) {
+                                
+                                Text("Featured Cafe Items")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(pColor)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.bottom, 10)
+                                
+                                Spacer()
+                                
+                                Button() {
+                                    selectionValue = 2
+                                } label: {
+                                    Text("View more")
+                                        .foregroundColor(yColor)
+                                        .font(.system(size: 12))
+                                }
+                                
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(yColor)
+                                    .font(.system(size: 10))
+                            }
                             
                             HStack(spacing: 20) {
                                 
@@ -342,12 +360,6 @@ struct HomePageView: View {
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
-    }
-}
-
-struct HomePageView_Previews_2: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        HomePageView(selectionValue: Binding.constant(1))
     }
 }

@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct AccountView: View {
+    
     var body: some View {
-        Text("Account")
+        
+        NavigationView {
+            VStack {
+                
+                // Button that leads to settings, need to program
+                NavigationLink(destination: SettingsView()) {
+                    Image(systemName: "gearshape.fill")
+                }
+                Text("Account")
+            
+            }
+        }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
