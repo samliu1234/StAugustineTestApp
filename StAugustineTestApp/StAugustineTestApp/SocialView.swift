@@ -115,8 +115,8 @@ struct SocialView: View {
                 }
             }
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+        //.navigationBarTitle("")
+        //.navigationBarHidden(true)
     }
 }
 
