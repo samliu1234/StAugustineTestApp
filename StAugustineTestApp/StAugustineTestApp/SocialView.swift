@@ -14,12 +14,16 @@ struct SocialView: View {
     @State var clubNames:[String] = ["Computer Science Club", "Engineering Club"]
     @State var imageNames:[String] = ["computerScience", "engineering"]
     
+    @State var isNavigationBarHidden: Bool = false
+    
     var body: some View {
-        
+
         NavigationView {
+        
             GeometryReader { geometry in
                 
                 ScrollView {
+                    
                 
                     VStack(alignment: .center, spacing: 10) {
                         
@@ -36,6 +40,7 @@ struct SocialView: View {
                             
                         }
                         .padding(.all, 25)
+                        .frame(width: geometry.size.width * 0.85)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(pColor, lineWidth: 8)
@@ -115,8 +120,14 @@ struct SocialView: View {
                 }
             }
         }
-        //.navigationBarTitle("")
-        //.navigationBarHidden(true)
+        .hiddenNavigationBarStyle() // WHY DOES THIS NOT WORK
+        /*
+        .navigationBarTitle("Hidden Title")
+        .navigationBarHidden(self.isNavigationBarHidden)
+        .onAppear {
+            self.isNavigationBarHidden = false
+        }
+ */
     }
 }
 

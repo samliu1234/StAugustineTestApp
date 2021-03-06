@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct FAQView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
+    let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     
     var body: some View {
         ScrollView {
@@ -33,7 +35,7 @@ struct FAQView: View {
                 )
                 .background(pColor)
                 .cornerRadius(20)
-                .padding(.all, 25)
+                .padding([.horizontal, .bottom], 25)
                 
                 // MARK: FAQ
                 FAQViewObject(
@@ -81,6 +83,21 @@ struct FAQView: View {
 
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(yColor)
+                        .font(.system(size: 20))
+                    Text("Back")
+                        .foregroundColor(yColor)
+                        .font(.system(size: 20))
+                }
+            }
+        )
 
     }
 }

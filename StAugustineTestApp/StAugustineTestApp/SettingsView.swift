@@ -36,13 +36,14 @@ struct SettingsView: View {
                     
                 }
                 .padding(.all, 25)
+                .frame(width: geometry.size.width * 0.85)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(pColor, lineWidth: 8)
                 )
                 .background(pColor)
                 .cornerRadius(20)
-                .padding([.horizontal, .top], 25)
+                .padding(.horizontal, 25)
                 
                 // MARK: Settings panel
                 VStack(alignment: .leading, spacing: 20) {
@@ -108,12 +109,10 @@ struct SettingsView: View {
                     
                     Spacer()
                     
-                    Button(action: {
-                        print("hi")
-                    }, label: {
+                    NavigationLink(destination: FAQView()) {
                         Image(systemName: "arrow.right")
                             .foregroundColor(yColor)
-                    })
+                    }
                     
                 }
                 .frame(width: 0.7 * geometry.size.width, alignment: .center)

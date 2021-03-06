@@ -145,14 +145,17 @@ struct HomePageView: View {
                                 Button() {
                                     selectionValue = 2
                                 } label: {
-                                    Text("View more")
-                                        .foregroundColor(yColor)
-                                        .font(.system(size: 12))
+                                    HStack {
+                                        Text("View more")
+                                            .foregroundColor(yColor)
+                                            .font(.system(size: 12))
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(yColor)
+                                            .font(.system(size: 10))
+                                    }
                                 }
                                 
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(yColor)
-                                    .font(.system(size: 10))
+
                             }
                             
                             HStack(spacing: 20) {
@@ -348,6 +351,7 @@ struct HomePageView: View {
                     //self.database.getDayNumber()
                     //self.database.getCafeMenu()
                 }
+                .padding(.bottom, 30)
             
             }
             
