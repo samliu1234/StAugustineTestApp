@@ -37,7 +37,7 @@ struct TabsView: View {
                         .renderingMode(.template) // Allows for yellow highlight
                 }.tag(1)
 
-            CafMenuTestView()
+            CafeMenuView()
                 .tabItem {
                     Image("restaurant")
                         .renderingMode(.template)
