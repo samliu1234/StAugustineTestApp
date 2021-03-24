@@ -31,35 +31,130 @@ struct CafeMenuView: View {
     var body: some View {
         
         GeometryReader { geometry in
-        
-            GridStack(rows: 4, columns: 2) { row, col in
-                
-                ZStack {
-                    
-                    Image(food[0])
-                        .resizable()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(pColor, lineWidth: 3)
-                                .foregroundColor(.clear)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
-                                
-                            )
-                        .cornerRadius(10)
-                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.2)
+            
+            ScrollView {
+            
+                HStack {
+
+                    VStack(alignment: .leading, spacing: 15) {
                         
+                        Text("Cafeteria Menu")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
                     
-                    Text("Fish")
-                        .foregroundColor(.white)
-                        .bold()
-                        .offset(y: geometry.size.height * 0.08)
-                        .font(.system(size: 16))
-                        
                 }
+                .padding(.all, 25)
+                .frame(width: geometry.size.width * 0.85)
+                .background(pColor)
+                .cornerRadius(20)
+                
+                // filler white space to sepearate the two
+                VStack {
+                    
+                }
+                .frame(height: geometry.size.height * 0.05)
+                
+                VStack {
+                    
+                    Text("Today's Specials")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(pColor)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 10)
+            
+                    GridStack(rows: 4, columns: 2) { row, col in
+                        
+                            ZStack {
+                                
+                                Image(food[0])
+                                    .resizable()
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(pColor, lineWidth: 3)
+                                            .foregroundColor(.clear)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                                            
+                                        )
+                                    .cornerRadius(10)
+                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.2)
+                                    
+                                
+                                Text("Fish")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .offset(y: geometry.size.height * 0.08)
+                                    .font(.system(size: 16))
+                                    
+                            }
+                        
+                        
+                        
+                    }
+                    //.padding(.leading, geometry.size.width * 0.2)
+                }
+                .padding(.all, 25)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                .frame(width: geometry.size.width * 0.85)
+                
+                // filler white space to sepearate the two
+                VStack {
+                    
+                }
+                .frame(height: geometry.size.height * 0.02)
+                
+                VStack {
+                    
+                    Text("Menu")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(pColor)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 10)
+            
+                    GridStack(rows: 4, columns: 2) { row, col in
+                        
+                            ZStack {
+                                
+                                Image(food[0])
+                                    .resizable()
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(pColor, lineWidth: 3)
+                                            .foregroundColor(.clear)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
+                                            
+                                        )
+                                    .cornerRadius(10)
+                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.2)
+                                    
+                                
+                                Text("Fish")
+                                    .foregroundColor(.white)
+                                    .bold()
+                                    .offset(y: geometry.size.height * 0.08)
+                                    .font(.system(size: 16))
+                                    
+                            }
+                        
+                        
+                        
+                    }
+                    //.padding(.leading, geometry.size.width * 0.2)
+                }
+                .padding(.all, 25)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                .frame(width: geometry.size.width * 0.85)
             }
-            .padding(.leading, geometry.size.width * 0.2)
+            .padding(.all, 25)
+            
         }
-        
     }
     
 }
