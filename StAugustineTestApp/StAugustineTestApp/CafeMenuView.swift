@@ -201,9 +201,9 @@ struct CafeMenuView: View {
         
     }
 }
-
+*/
 struct CafeMenuView_Previews: PreviewProvider {
     static var previews: some View {
         CafeMenuView()
     }
-}*/
+}

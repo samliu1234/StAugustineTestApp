@@ -13,6 +13,7 @@ struct FAQView: View {
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     
+    
     var body: some View {
         ScrollView {
             VStack (spacing: 15) {
