@@ -76,7 +76,7 @@ struct HomePageView: View {
                         .background(pColor)
                         .cornerRadius(20)
                         
-                        
+                        /*
                         // MARK: Announcemnts board
                         VStack(spacing: 10) {
                             
@@ -98,7 +98,7 @@ struct HomePageView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
                         .frame(width: geometry.size.width * 0.85)
-                        
+                        */
                         // MARK: Cafe items
                         VStack {
                             
@@ -160,45 +160,13 @@ struct HomePageView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom, 10)
                             
-                            HStack() {
-                                Text(String(9))
-                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
-                                    .foregroundColor(pColor)
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(width: geometry.size.width * 0.55 * 0.3, height: 10, alignment: .leading)
-                                    .foregroundColor(yColor)
-                                Spacer()
-                            }
+                            SpiritMeter(grade: $grades[0], percentage: $percentages[0], screenWidth: Double(geometry.size.width))
                             
-                            HStack() {
-                                Text(String(10))
-                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
-                                    .foregroundColor(pColor)
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(width: geometry.size.width * 0.55 * 0.6, height: 10, alignment: .leading)
-                                    .foregroundColor(yColor)
-                                Spacer()
-                            }
+                            SpiritMeter(grade: $grades[1], percentage: $percentages[1], screenWidth: Double(geometry.size.width))
                             
-                            HStack() {
-                                Text(String(11))
-                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
-                                    .foregroundColor(pColor)
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(width: geometry.size.width * 0.55 * 0.9, height: 10, alignment: .leading)
-                                    .foregroundColor(yColor)
-                                Spacer()
-                            }
+                            SpiritMeter(grade: $grades[2], percentage: $percentages[2], screenWidth: Double(geometry.size.width))
                             
-                            HStack() {
-                                Text(String(12))
-                                    .frame(idealWidth: 30, maxWidth: 30, alignment: .leading)
-                                    .foregroundColor(pColor)
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(width: geometry.size.width * 0.55, height: 10, alignment: .leading)
-                                    .foregroundColor(yColor)
-                                Spacer()
-                            }
+                            SpiritMeter(grade: $grades[3], percentage: $percentages[3], screenWidth: Double(geometry.size.width))
                             
                         }
                         
