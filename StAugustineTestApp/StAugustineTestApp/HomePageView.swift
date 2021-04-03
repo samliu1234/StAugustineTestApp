@@ -15,10 +15,12 @@ struct HomePageView: View {
     let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     let tmpColor = Color(red: 211/255, green: 211/255, blue: 211/255, opacity: 0.7)
     
-    @State var items = ["Pizza", "Burger", "Patty"]
-    @State var costs = [3.75, 4.50, 2.00]
+    @State var imageNames = ["rotini_pasta", "fish", "chicken_legs"]
+    @State var items = ["Rotini Pasta", "Fish", "Chicken Legs"]
+    @State var costs = [4.50, 6.50, 4.00]
     @State var grades = [9, 10, 11, 12]
     @State var percentages = [0.7, 0.6, 0.3, 1]
+    @State var announcements = [["Yearbook", "Hi there yearbook club here. How are y'all doing?"], ["Basketball team", "Tryouts start tomorrow everyone! Come out and show us what you got!"]]
     
     @Binding var selectionValue: Int
     
@@ -76,51 +78,20 @@ struct HomePageView: View {
                         
                         
                         // MARK: Announcemnts board
-                        VStack(alignment: .leading, spacing: 20) {
+                        VStack(spacing: 10) {
                             
-                            Text("Announcements Board")
+                            Text("Announcement Board")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(pColor)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom, 10)
                             
-                            VStack(spacing: 10) {
-                                Text("Yearbook")
-                                    .bold()
-                                    .foregroundColor(pColor)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("Hi there, yearbook club here. How are y'all doing?")
-                                    .font(.body)
-                                    .foregroundColor(pColor)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            }
-                            .frame(width: geometry.size.width * 0.62)
-                            .padding(.all)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(pColor, lineWidth: 0.75))
-                            
-                            
-                            VStack(spacing: 10) {
-                                Text("Basketball team")
-                                    .bold()
-                                    .foregroundColor(pColor)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("Tryouts start tomorrow everyone! Come out and show us what you got!")
-                                    .font(.body)
-                                    .foregroundColor(pColor)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            }
-                            .frame(width: geometry.size.width * 0.62)
-                            .padding(.all)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(pColor, lineWidth: 0.75))
-                            
-                            
+                            AnnouncementObject(title: $announcements[0][0], text: $announcements[0][1])
+                                .padding(.bottom, 10)
+                            AnnouncementObject(title: $announcements[1][0], text: $announcements[1][1])
+        
                         }
-                        
                         // Properties for announcement board
                         .padding(.all, 25)
                         .overlay(
@@ -160,88 +131,18 @@ struct HomePageView: View {
                             
                             HStack(spacing: 20) {
                                 
-                                /*
-                                CafeItem(item: $items[0], price: $costs[0])
-                                    //.frame(width: geometry.size.width * 0.3)
-                                CafeItem(item: $items[1], price: $costs[1])
-                                CafeItem(item: $items[2], price: $costs[2])
- */
-                                // MARK: Item 1
-                                ZStack {
-                                    
-                                    Image("rotini_pasta")
-                                        .resizable()
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(pColor, lineWidth: 3)
-                                                .foregroundColor(.clear)
-                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
-                                                
-                                            )
-                                        .cornerRadius(10)
-                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
-                                        
-                                    
-                                    Text("Rotini Pasta")
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .offset(y: geometry.size.height * 0.08)
-                                        .font(.system(size: 8))
-                                        
-                                }
+                                CafeItem(imageName: $imageNames[0], item: $items[0], price: $costs[0])
+                                    .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
                                 
-                                // MARK: Item 2
-                                ZStack {
-                                    
-                                    Image("fish")
-                                        .resizable()
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(pColor, lineWidth: 3)
-                                                .foregroundColor(.clear)
-                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
-                                                
-                                            )
-                                        .cornerRadius(10)
-                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
-                                        
-                                    
-                                    Text("Fish")
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .offset(y: geometry.size.height * 0.08)
-                                        .font(.system(size: 8))
-                                        
-                                }
+                                CafeItem(imageName: $imageNames[1], item: $items[1], price: $costs[1])
+                                    .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
                                 
-                                // MARK: Item 3
-                                ZStack {
-                                    
-                                    Image("chicken_legs")
-                                        .resizable()
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(pColor, lineWidth: 3)
-                                                .foregroundColor(.clear)
-                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, tmpColor]), startPoint: .top, endPoint: .bottom))
-                                                
-                                            )
-                                        .cornerRadius(10)
-                                        .frame(width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
-                                        
-                                    
-                                    Text("Chicken Legs")
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .offset(y: geometry.size.height * 0.08)
-                                        .font(.system(size: 8))
-                                        
-                                }
-                             
+                                CafeItem(imageName: $imageNames[2], item: $items[2], price: $costs[2])
+                                    .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
+                               
                             }
   
                         }
-                        
                         // Properties for cafe items
                         .padding(.all, 25)
                         .overlay(
