@@ -15,6 +15,7 @@ struct AddSongView: View {
     
     @State var songSelection: String = ""
     @State var artistSelection: String = ""
+    @State var isShowingText:Bool = false
     @Binding var songNumber: Int 
     @Binding var songNames: [String]
     @Binding var songAuthors: [String]
@@ -22,7 +23,9 @@ struct AddSongView: View {
     @Binding var clicked: [Bool]
     
     var body: some View {
+        
         VStack {
+            
             Text("Song")
                 .foregroundColor(pColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -51,6 +54,8 @@ struct AddSongView: View {
                     songNumber += 1
                     songSelection = ""
                     artistSelection = ""
+                    isShowingText.toggle()
+                    print("Requested song")
                 }
             }, label: {
                 Text("Request")
@@ -59,6 +64,16 @@ struct AddSongView: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
             })
             .padding()
+            
+            if isShowingText {
+                Text("Your song has been suggested!")
+                    .foregroundColor(yColor)
+                    .onAppear {
+                        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                            self.isShowingText.toggle()
+                        }
+                    }
+            }
             
             Spacer()
             
@@ -79,6 +94,7 @@ struct AddSongView: View {
                 }
             }
         )
+    
         
     }
 }

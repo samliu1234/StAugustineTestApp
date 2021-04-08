@@ -136,10 +136,10 @@ struct AccountView: View {
                     .frame(width: geometry.size.width * 0.85)
                     
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                // MOVE WITHIN NAVIGATION VIEW BRACKETS TO REMOVE SPACE AT THE TOP
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-            
         }
     }
 }

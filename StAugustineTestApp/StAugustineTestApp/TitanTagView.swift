@@ -32,18 +32,20 @@ struct TitanTagView: View {
                     
                 }
                 .padding(.all, 25)
-                .frame(width: geometry.size.width * 0.8)
+                .frame(width: geometry.size.width * 0.85)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(pColor, lineWidth: 8)
                 )
                 .background(pColor)
                 .cornerRadius(20)
-                .padding([.horizontal, .bottom], 25)
+                .padding(.horizontal, 25)
+                .padding(.bottom, 30)
                 
                 Image("qrcode")
                 
                 Text("This is your personal Titan Tag. You can get it scanned by club admins at events to get badges")
+                    .foregroundColor(pColor)
                     .multilineTextAlignment(.center)
                     .padding()
                 

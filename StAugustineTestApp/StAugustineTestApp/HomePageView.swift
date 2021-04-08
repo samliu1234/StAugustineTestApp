@@ -76,7 +76,6 @@ struct HomePageView: View {
                         .background(pColor)
                         .cornerRadius(20)
                         
-                        /*
                         // MARK: Announcemnts board
                         VStack(spacing: 10) {
                             
@@ -98,7 +97,7 @@ struct HomePageView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
                         .frame(width: geometry.size.width * 0.85)
-                        */
+                        
                         // MARK: Cafe items
                         VStack {
                             

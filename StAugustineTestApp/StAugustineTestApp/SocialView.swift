@@ -117,17 +117,12 @@ struct SocialView: View {
                         .padding(.horizontal, 25)
                         
                     }
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                    // MOVE WITHIN NAVIGATION VIEW BRACKETS TO REMOVE SPACE AT THE TOP
                 }
             }
         }
-        .hiddenNavigationBarStyle() // WHY DOES THIS NOT WORK
-        /*
-        .navigationBarTitle("Hidden Title")
-        .navigationBarHidden(self.isNavigationBarHidden)
-        .onAppear {
-            self.isNavigationBarHidden = false
-        }
- */
     }
 }
 

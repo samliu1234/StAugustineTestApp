@@ -72,17 +72,9 @@ struct SongRequestView: View {
                         }
                         
                         // MARK: Individual song requests
-                        ForEach(0..<songNumber) { i in
+                        ForEach(0..<songNumber, id: \.self) { i in
                             SongRequestObject(songName: $songNames[i], songAuthor: $songAuthors[i], votes: $votes[i], highlight: $clicked[i])
                         }
-                        /*
-                        SongRequestObject(songName: $songNames[0], songAuthor: $songAuthors[0], votes: $votes[0], highlight: $clicked[0])
-
-                        SongRequestObject(songName: $songNames[1], songAuthor: $songAuthors[1], votes: $votes[1], highlight: $clicked[1])
-                        
-                        SongRequestObject(songName: $songNames[2], songAuthor: $songAuthors[2], votes: $votes[2], highlight: $clicked[2])
- */
-                        
 
                     }
                     
@@ -94,6 +86,9 @@ struct SongRequestView: View {
                     .padding(.all, 25)
                     
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                // MOVE WITHIN NAVIGATION VIEW BRACKETS TO REMOVE SPACE AT THE TOP
                 
             }
             

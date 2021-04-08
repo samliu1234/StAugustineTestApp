@@ -32,29 +32,25 @@ struct CafeMenuView: View {
         
         GeometryReader { geometry in
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
             
                 HStack {
-
-                    VStack(alignment: .leading, spacing: 15) {
                         
-                        Text("Cafeteria Menu")
-                            .font(.title2)
-                            .bold()
-                            .foregroundColor(.white)
-                    }
+                    Text("Cafeteria Menu")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
+                    Spacer()
                     
                 }
                 .padding(.all, 25)
                 .frame(width: geometry.size.width * 0.85)
                 .background(pColor)
                 .cornerRadius(20)
+                .padding(.bottom, 20)
                 
-                // filler white space to sepearate the two
-                VStack {
-                    
-                }
-                .frame(height: geometry.size.height * 0.05)
                 
                 VStack {
                     
@@ -63,7 +59,7 @@ struct CafeMenuView: View {
                         .fontWeight(.bold)
                         .foregroundColor(pColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 15)
             
                     GridStack(rows: 4, columns: 2) { row, col in
                         
@@ -79,18 +75,17 @@ struct CafeMenuView: View {
                                             
                                         )
                                     .cornerRadius(10)
-                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.2)
+                                    .frame(width: geometry.size.width * 0.325, height: geometry.size.height * 0.22)
+                                    .padding(5)
                                     
                                 
                                 Text("Fish")
                                     .foregroundColor(.white)
                                     .bold()
-                                    .offset(y: geometry.size.height * 0.08)
-                                    .font(.system(size: 16))
+                                    .offset(y: geometry.size.height * 0.07)
+                                    .font(.system(size: 14))
                                     
                             }
-                        
-                        
                         
                     }
                     //.padding(.leading, geometry.size.width * 0.2)
@@ -100,12 +95,7 @@ struct CafeMenuView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
                 .frame(width: geometry.size.width * 0.85)
-                
-                // filler white space to sepearate the two
-                VStack {
-                    
-                }
-                .frame(height: geometry.size.height * 0.02)
+                .padding(.bottom, 25)
                 
                 VStack {
                     
@@ -114,7 +104,7 @@ struct CafeMenuView: View {
                         .fontWeight(.bold)
                         .foregroundColor(pColor)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 15)
             
                     GridStack(rows: 4, columns: 2) { row, col in
                         
@@ -130,7 +120,8 @@ struct CafeMenuView: View {
                                             
                                         )
                                     .cornerRadius(10)
-                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.2)
+                                    .frame(width: geometry.size.width * 0.325, height: geometry.size.height * 0.22)
+                                    .padding(5)
                                     
                                 
                                 Text("Fish")
