@@ -82,7 +82,7 @@ struct SongRequestView: View {
                     .padding(.all, 25)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                            .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                     .padding(.all, 25)
                     
                 }

@@ -47,11 +47,13 @@ struct HomePageView: View {
                                     .font(.title2)
                                     .bold()
                                     .foregroundColor(.white)
+                                    .fixedSize(horizontal: false, vertical: true)
                                 
                                 Text("Saturday, November 12 \nCohort A")
                                     //.font(.body)
                                     .foregroundColor(.white)
                                     .font(.system(size: 13))
+                                    .fixedSize(horizontal: false, vertical: true)
                                 
                             }
                             
@@ -87,15 +89,17 @@ struct HomePageView: View {
                                 .padding(.bottom, 10)
                             
                             AnnouncementObject(title: $announcements[0][0], text: $announcements[0][1])
+                                .fixedSize(horizontal: false, vertical: true)
                                 .padding(.bottom, 10)
                             AnnouncementObject(title: $announcements[1][0], text: $announcements[1][1])
+                                .fixedSize(horizontal: false, vertical: true)
         
                         }
                         // Properties for announcement board
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Cafe items
@@ -146,7 +150,7 @@ struct HomePageView: View {
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Spirit meter
@@ -173,7 +177,7 @@ struct HomePageView: View {
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .frame(width: geometry.size.width * 0.85)
                         
                         // MARK: Chaplaincy corner
@@ -195,6 +199,7 @@ struct HomePageView: View {
                                     .font(.body)
                                     .foregroundColor(pColor)
                                     .frame(maxWidth: .infinity, alignment: .leading)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             .frame(width: geometry.size.width * 0.6)
                             .padding(.all, 20)
@@ -209,7 +214,7 @@ struct HomePageView: View {
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .frame(width: geometry.size.width * 0.85)
                         
                     }

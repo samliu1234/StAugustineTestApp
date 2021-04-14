@@ -39,6 +39,7 @@
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 		56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31CA25E486D300ECF81D /* FAQViewObject.swift */; };
 		56DA31D325E4871200ECF81D /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31D225E4871200ECF81D /* FAQView.swift */; };
+		56E88B052627641900DBF6C3 /* JoinClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E88B042627641900DBF6C3 /* JoinClubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 		56DA31CA25E486D300ECF81D /* FAQViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewObject.swift; sourceTree = "<group>"; };
 		56DA31D225E4871200ECF81D /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		56E88B042627641900DBF6C3 /* JoinClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinClubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				3498610125604AA0009ED45A /* Database.swift */,
 				56DA31D225E4871200ECF81D /* FAQView.swift */,
 				34566C482543382D00D1156E /* HomePageView.swift */,
+				56E88B042627641900DBF6C3 /* JoinClubView.swift */,
 				34566C1E254337F100D1156E /* Persistence.swift */,
 				3469A6A525F4339500215CB2 /* Settings.swift */,
 				561CFD6425C757FE008BBAA1 /* SettingsView.swift */,
@@ -214,12 +217,12 @@
 		565C311A25C0CDA300796043 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				56DA31CA25E486D300ECF81D /* FAQViewObject.swift */,
-				5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */,
+				563E0A702619169C00B30722 /* AnnouncementObject.swift */,
+				5646F5A225ED921600B7DBAA /* BackButton.swift */,
 				565C311E25C0CDD200796043 /* CafeItem.swift */,
 				561FFD4E25C6032400D228E4 /* ClubView.swift */,
-				5646F5A225ED921600B7DBAA /* BackButton.swift */,
-				563E0A702619169C00B30722 /* AnnouncementObject.swift */,
+				56DA31CA25E486D300ECF81D /* FAQViewObject.swift */,
+				5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */,
 				563E0A75261922BD00B30722 /* SpiritMeter.swift */,
 			);
 			path = Objects;
@@ -372,6 +375,7 @@
 				349D1835254629FD00AE981F /* SongRequestView.swift in Sources */,
 				349D184725462B8F00AE981F /* TabsView.swift in Sources */,
 				349D18302546295500AE981F /* CafeMenuView.swift in Sources */,
+				56E88B052627641900DBF6C3 /* JoinClubView.swift in Sources */,
 				5651354225F415C400146111 /* ViewModifier.swift in Sources */,
 				56389BEA25E9B319002B25B5 /* TitanTagView.swift in Sources */,
 				563E0A76261922BD00B30722 /* SpiritMeter.swift in Sources */,

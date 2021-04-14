@@ -63,6 +63,23 @@ struct SocialView: View {
                             
                             ClubView(clubName: $clubNames[1], imageName: $imageNames[1])
                             
+                            NavigationLink(destination: JoinClubView()) {
+                                HStack {
+                                    Spacer()
+                                    Text("Join Club")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                    Spacer()
+                                }
+                                .padding(.all, 10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(yColor, lineWidth: 0.75)
+                                )
+                                .background(yColor)
+                                .cornerRadius(25)
+                            }
+                            /*
                             Button(action: {
                                 print("New club")
                             }, label: {
@@ -81,14 +98,15 @@ struct SocialView: View {
                                 .background(yColor)
                                 .cornerRadius(25)
                             })
-                            
+                          */
                         }
+ 
                         // Properties for song requests
                         .frame(width: 0.7 * geometry.size.width, alignment: .center)
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .padding(.all, 25)
                         
                         // MARK: Titan tag
@@ -113,7 +131,7 @@ struct SocialView: View {
                         .padding(.all, 25)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 4))
+                                .stroke(Color(red: 0/255, green: 0/255, blue: 0/255, opacity: 0.15), lineWidth: 3))
                         .padding(.horizontal, 25)
                         
                     }
