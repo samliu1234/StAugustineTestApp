@@ -526,8 +526,8 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   FirebaseInstanceID: bd3ffc24367f901a43c063b36c640b345a4a5dd1
   FirebaseMessaging: 5eca4ef173de76253352511aafef774caa1cba2a
-  FirebaseMLCommon: d218d75dd1c6c4e447f731ac22da56b88cb79431
-  FirebaseMLVision: 68dd092b4c52a7ac163ec0d4f541d5711fc9fec6
+  FirebaseMLCommon: f42d067ca7fed962e09f02ba94a24e06ee50d933
+  FirebaseMLVision: fd7cdd33d067c976c16fd521e7e92c26c980c947
   FirebaseMLVisionBarcodeModel: 394cd61c52dc03558088caf82b0dade8028f57d5
   FirebaseRemoteConfig: 35a729305f254fb15a2e541d4b36f3a379da7fdc
   FirebaseStorage: 15e0f15ef3c7fec3d1899d68623e47d4447066b4
@@ -550,4 +550,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 8de982cdd2b31d74f417b8da0c5acb7346115155
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

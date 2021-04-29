@@ -5,7 +5,6 @@
 //  Created by Matthew Morelli on 2020-11-14.
 //
 
-/*
 import Foundation
 import Firebase
 
@@ -155,5 +154,4 @@ class Database: ObservableObject {
         }
     }*/
 }
- */
-
+ 
