@@ -7,6 +7,9 @@
 
 import Foundation
 import Firebase
+import os.log
+
+//let logger = Logger()
 
 class Database: ObservableObject {
     
@@ -101,12 +104,13 @@ class Database: ObservableObject {
     
     @Published var showSnowDayLabel = false
     @Published var showDayNumber = false
-    /*
+    
     func getDayNumber() {
         db.collection("info").document("dayNumber").getDocument { (snap, err) in
             if let err = err {
-                self.dayNumber = "Error: \(err.localizedDescription)"
+                self.dayNumber = "Error123: \(err.localizedDescription)"
             }
+            logger.log("SAMTEST1\(self.dayNumber)")
             if let snap = snap {
                 let data = snap.data() ?? ["dayNumber": "0", "haveFun": false, "snowDay": false]
                 let theDayNumber = data["dayNumber"] as? String ?? "0"
@@ -152,6 +156,6 @@ class Database: ObservableObject {
 
             }
         }
-    }*/
+    }
 }
  

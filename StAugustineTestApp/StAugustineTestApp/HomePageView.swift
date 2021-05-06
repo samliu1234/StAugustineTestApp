@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import os.log
+
+let logger = Logger()
 
 struct HomePageView: View {
     
@@ -14,6 +17,8 @@ struct HomePageView: View {
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     let tmpColor = Color(red: 211/255, green: 211/255, blue: 211/255, opacity: 0.7)
+    
+    @StateObject var db = Database()
     
     @State var imageNames = ["rotini_pasta", "fish", "chicken_legs"]
     @State var items = ["Rotini Pasta", "Fish", "Chicken Legs"]
@@ -49,7 +54,7 @@ struct HomePageView: View {
                                     .foregroundColor(.white)
                                     .fixedSize(horizontal: false, vertical: true)
                                 
-                                Text("Saturday, November 12 \nCohort A")
+                                Text("Saturday, November 12 \n"+db.dayNumber)
                                     //.font(.body)
                                     .foregroundColor(.white)
                                     .font(.system(size: 13))
@@ -221,7 +226,8 @@ struct HomePageView: View {
                     Spacer()
                 }
                 .onAppear {
-                    //self.database.getDayNumber()
+                    self.db.getDayNumber()
+                    logger.log("TESTING\(self.db.dayNumber)")
                     //self.database.getCafeMenu()
                 }
                 .padding(.bottom, 30)

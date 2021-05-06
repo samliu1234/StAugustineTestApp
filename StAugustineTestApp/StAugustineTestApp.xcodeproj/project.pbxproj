@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -254,7 +254,6 @@
 				FAAE280C4FABE4C3CF01966E /* Pods-StAugustineTestAppTests.debug.xcconfig */,
 				A38A0EAD1A7EA7287B72BEBB /* Pods-StAugustineTestAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -736,7 +735,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.mm.StAugustineTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennymiu.St-Augustine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -758,7 +757,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Com.mm.StAugustineTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kennymiu.St-Augustine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
