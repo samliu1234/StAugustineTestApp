@@ -23,7 +23,7 @@ class Database: ObservableObject {
     var theActualMenu = [[Any]]()
     
     init() {
-        FirebaseApp.configure()
+        // FirebaseApp.configure()
         //Set Up
         // [START setup]
         let settings = FirestoreSettings()

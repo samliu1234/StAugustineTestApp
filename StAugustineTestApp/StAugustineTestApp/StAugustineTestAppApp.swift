@@ -9,21 +9,19 @@ import SwiftUI
 
 @main
 struct StAugustineTestAppApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
     
-    // @StateObject private var database = Database()
-    @StateObject private var settings = Settings()
+    // @StateObject private var settings = Settings()
     
     var body: some Scene {
+        
         WindowGroup {
             
-            //CafeMenuView().environmentObject(settings)
-            
-            ContentView()
+            ContentView(delegate: appDelegate)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
-            //AppView().environmentObject(database)
-            
         }
+        
     }
 }

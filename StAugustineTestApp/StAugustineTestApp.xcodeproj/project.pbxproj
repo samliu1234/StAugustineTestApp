@@ -18,7 +18,6 @@
 		34566C2D254337F100D1156E /* StAugustineTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C2C254337F100D1156E /* StAugustineTestAppTests.swift */; };
 		34566C38254337F100D1156E /* StAugustineTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C37254337F100D1156E /* StAugustineTestAppUITests.swift */; };
 		34566C492543382D00D1156E /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34566C482543382D00D1156E /* HomePageView.swift */; };
-		34635D902560664D00D1AE0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34635D8F2560664D00D1AE0A /* GoogleService-Info.plist */; };
 		3469A6A025F42FC700215CB2 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A69F25F42FC700215CB2 /* GridStack.swift */; };
 		3469A6A625F4339500215CB2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3469A6A525F4339500215CB2 /* Settings.swift */; };
 		349860FD25604959009ED45A /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349860FC25604959009ED45A /* Announcements.swift */; };
@@ -37,6 +36,8 @@
 		563E0A76261922BD00B30722 /* SpiritMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0A75261922BD00B30722 /* SpiritMeter.swift */; };
 		5646F5A325ED921600B7DBAA /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646F5A225ED921600B7DBAA /* BackButton.swift */; };
 		5651354225F415C400146111 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5651354125F415C400146111 /* ViewModifier.swift */; };
+		565BAB0B2646EDE80038178B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BAB0A2646EDE80038178B /* AppDelegate.swift */; };
+		565BAB112646F57A0038178B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 565BAB102646F57A0038178B /* GoogleService-Info.plist */; };
 		565C311F25C0CDD200796043 /* CafeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C311E25C0CDD200796043 /* CafeItem.swift */; };
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 		56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31CA25E486D300ECF81D /* FAQViewObject.swift */; };
@@ -78,7 +79,6 @@
 		34566C37254337F100D1156E /* StAugustineTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StAugustineTestAppUITests.swift; sourceTree = "<group>"; };
 		34566C39254337F100D1156E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34566C482543382D00D1156E /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
-		34635D8F2560664D00D1AE0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3469A69F25F42FC700215CB2 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		3469A6A525F4339500215CB2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		349860FC25604959009ED45A /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 		563E0A75261922BD00B30722 /* SpiritMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritMeter.swift; sourceTree = "<group>"; };
 		5646F5A225ED921600B7DBAA /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		5651354125F415C400146111 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		565BAB0A2646EDE80038178B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		565BAB102646F57A0038178B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		565C311E25C0CDD200796043 /* CafeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeItem.swift; sourceTree = "<group>"; };
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 		56DA31CA25E486D300ECF81D /* FAQViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewObject.swift; sourceTree = "<group>"; };
@@ -168,11 +170,12 @@
 			children = (
 				5651354025F415AA00146111 /* Extensions */,
 				565C311A25C0CDA300796043 /* Objects */,
+				565BAB102646F57A0038178B /* GoogleService-Info.plist */,
 				34566C19254337F100D1156E /* Assets.xcassets */,
-				34635D8F2560664D00D1AE0A /* GoogleService-Info.plist */,
 				349D182A254628C400AE981F /* AccountView.swift */,
 				5612930C25F67496000B3E64 /* AddSongView.swift */,
 				349860FC25604959009ED45A /* Announcements.swift */,
+				565BAB0A2646EDE80038178B /* AppDelegate.swift */,
 				34E6E6A225C77FBC00BB5F72 /* CafMenuTestView.swift */,
 				349D182F2546295500AE981F /* CafeMenuView.swift */,
 				3469A69F25F42FC700215CB2 /* GridStack.swift */,
@@ -379,7 +382,7 @@
 			files = (
 				34566C1D254337F100D1156E /* Preview Assets.xcassets in Resources */,
 				34566C1A254337F100D1156E /* Assets.xcassets in Resources */,
-				34635D902560664D00D1AE0A /* GoogleService-Info.plist in Resources */,
+				565BAB112646F57A0038178B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +548,7 @@
 				34566C22254337F100D1156E /* StAugustineTestApp.xcdatamodeld in Sources */,
 				34566C1F254337F100D1156E /* Persistence.swift in Sources */,
 				5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */,
+				565BAB0B2646EDE80038178B /* AppDelegate.swift in Sources */,
 				3469A6A025F42FC700215CB2 /* GridStack.swift in Sources */,
 				34E6E6A325C77FBC00BB5F72 /* CafMenuTestView.swift in Sources */,
 				5646F5A325ED921600B7DBAA /* BackButton.swift in Sources */,
