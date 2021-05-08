@@ -33,7 +33,7 @@ class Database: ObservableObject {
         db = Firestore.firestore()
     }
     
-    func getCafeMenu(){
+    func getCafeMenu() {
         
         db.collection("info").document("cafMenu").getDocument { (snap, err) in
             if let err = err {
@@ -52,7 +52,7 @@ class Database: ObservableObject {
         }
     }
     
-    func sortAlphaOrder(){
+    func sortAlphaOrder() {
         if self.theActualMenu.count > 1 {
             var thereWasASwap = true
             while thereWasASwap {
@@ -109,8 +109,8 @@ class Database: ObservableObject {
         db.collection("info").document("dayNumber").getDocument { (snap, err) in
             if let err = err {
                 self.dayNumber = "Error123: \(err.localizedDescription)"
+                return
             }
-            logger.log("SAMTEST1\(self.dayNumber)")
             if let snap = snap {
                 let data = snap.data() ?? ["dayNumber": "0", "haveFun": false, "snowDay": false]
                 let theDayNumber = data["dayNumber"] as? String ?? "0"
