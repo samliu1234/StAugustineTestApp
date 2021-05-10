@@ -13,6 +13,7 @@ struct ColorManager {
 
 struct TabsView: View {
     
+    @StateObject var db = Database()
     @State var selection: Int = 1
     
     let pColor = UIColor(red: 141/255, green: 18/255, blue: 48/255, alpha: 1)
@@ -31,13 +32,13 @@ struct TabsView: View {
         
         TabView(selection: $selection) {
             
-            HomePageView(selectionValue: $selection)
+            HomePageView(db: db, selectionValue: $selection)
                 .tabItem {
                     Image("home")
                         .renderingMode(.template) // Allows for yellow highlight
                 }.tag(1)
 
-            CafeMenuView()
+            CafeMenuView(db: db)
                 .tabItem {
                     Image("restaurant")
                         .renderingMode(.template)
@@ -62,7 +63,11 @@ struct TabsView: View {
                 }.tag(5)
             
         }
-        // .cornerRadius(20)
+        .onAppear {
+            self.db.getDayNumber()
+            self.db.getCafeMenu()
+            self.db.getRegularMenu()
+        }
         .accentColor(yColor)
         .edgesIgnoringSafeArea(.all)
     

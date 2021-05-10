@@ -18,11 +18,11 @@ struct HomePageView: View {
     let yColor:Color = Color(red: 216/255, green: 174/275, blue: 26/255)
     let tmpColor = Color(red: 211/255, green: 211/255, blue: 211/255, opacity: 0.7)
     
-    @StateObject var db = Database()
+    @ObservedObject var db: Database
     
-    @State var imageNames = ["rotini_pasta", "fish", "chicken_legs"]
-    @State var items = ["Rotini Pasta", "Fish", "Chicken Legs"]
-    @State var costs = [4.50, 6.50, 4.00]
+    var imageNames = ["rotini_pasta", "fish", "chicken_legs"]
+    var items = ["Rotini Pasta", "Fish", "Chicken Legs"]
+    var costs = [4.50, 6.50, 4.00]
     @State var grades = [9, 10, 11, 12]
     @State var percentages = [0.7, 0.6, 0.3, 1]
     @State var announcements = [["Yearbook", "Hi there yearbook club here. How are y'all doing?"], ["Basketball team", "Tryouts start tomorrow everyone! Come out and show us what you got!"]]
@@ -139,13 +139,13 @@ struct HomePageView: View {
                             
                             HStack(spacing: 20) {
                                 
-                                CafeItem(imageName: $imageNames[0], item: $items[0], price: $costs[0])
+                                CafeItem(imageName: imageNames[0], item: items[0], price: costs[0], size: 8)
                                     .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
                                 
-                                CafeItem(imageName: $imageNames[1], item: $items[1], price: $costs[1])
+                                CafeItem(imageName: imageNames[1], item: items[1], price: costs[1], size: 8)
                                     .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
                                 
-                                CafeItem(imageName: $imageNames[2], item: $items[2], price: $costs[2])
+                                CafeItem(imageName: imageNames[2], item: items[2], price: costs[2], size: 8)
                                     .frame(width: geometry.size.width * 0.21, height: geometry.size.height * 0.2)
                                
                             }
@@ -225,11 +225,6 @@ struct HomePageView: View {
                     }
                     Spacer()
                 }
-                .onAppear {
-                    self.db.getDayNumber()
-                    logger.log("TESTING\(self.db.dayNumber)")
-                    //self.database.getCafeMenu()
-                }
                 .padding(.bottom, 30)
             
             }
@@ -240,9 +235,10 @@ struct HomePageView: View {
     
 }
 
-
+/*
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView(selectionValue: Binding.constant(1))
     }
 }
+*/
