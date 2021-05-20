@@ -7,20 +7,37 @@
 
 import SwiftUI
 
+
+
 struct CafeItem: View {
+
+
+
+    
     var imageName: String
     var item: String
     var price: Double
     var size: CGFloat
     
+    
     let pColor:Color = Color(red: 141/255, green: 18/255, blue: 48/255)
     let tmpColor = Color(red: 211/255, green: 211/255, blue: 211/255, opacity: 0.7)
-    
+
+    // Cadawas
+    @State var image:UIImage = UIImage()
+    @ObservedObject var imageLoader:ImageLoader
+    init(imageName:String, item:String, price:Double, size:CGFloat){
+        self.imageName = imageName
+        self.item = item
+        self.price = price
+        self.size = size
+        imageLoader = ImageLoader(urlString:"https://firebasestorage.googleapis.com/v0/b/staugustinechsapp.appspot.com/o/cafMenu%2F5.png?alt=media&token=d0c636b9-ad55-42bf-92b8-281d92fa8ee9")
+    }
     var body: some View {
-        
+    
         ZStack {
             
-            Image(imageName)
+            Image(uiImage:image)
                 .resizable()
                 .scaledToFit()
                 .overlay(
@@ -31,6 +48,8 @@ struct CafeItem: View {
                         
                     )
                 .cornerRadius(10)
+                .onReceive(imageLoader.didChange) { data in
+                    self.image = UIImage(data: data) ?? UIImage() }
                 
             VStack {
                 

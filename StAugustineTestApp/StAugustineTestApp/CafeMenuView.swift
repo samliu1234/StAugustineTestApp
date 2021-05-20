@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct CafeMenuView: View {
-    
     @EnvironmentObject var settings: Settings
     @ObservedObject var db: Database
     
@@ -37,7 +36,6 @@ struct CafeMenuView: View {
     var body: some View {
         
         GeometryReader { geometry in
-            
             ScrollView(showsIndicators: false) {
             
                 HStack {
@@ -69,7 +67,6 @@ struct CafeMenuView: View {
                     GridStack(rows: self.db.menu.count / 2, columns: 2) { row, col in
                         
                         let val = 2 * row + col
-                        
                         if val < self.db.menu.count {
                             CafeItem(imageName: "fish", item: self.db.menu[val].0, price: self.db.menu[val].1, size: 13)
                                 .padding(.leading, col == 1 ? 5 : 0)
