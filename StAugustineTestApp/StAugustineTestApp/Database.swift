@@ -24,7 +24,6 @@ class Database: ObservableObject {
     var snowDayLabel = ""
     
     // Prayer
-    let prayerURL = URL(string: "https://www.biblegateway.com/")
     var dailyPrayer = ["b", "b"]
     
     @Published var showSnowDayLabel = false
@@ -126,8 +125,25 @@ class Database: ObservableObject {
     
     // MARK: Get Prayer Request
     func getPrayerRequest() {
-        URLSession.shared.dataTask(with: self.prayerURL!) { (data, response, error) in
+        guard let prayerURL = URL(string: "https://www.biblegateway.com/") else { return }
+        print("Just before open")
+        //URLSession.shared.dataTask(with: prayerURL) { (data, response, error) in
             // THIS PRINT STATEMENT DOESN'T WORK, LIKELY MEANING A URL ERROR
+          /*
+             init(urlString:String) {
+                 guard let url = URL(string: urlString) else { return }
+                 let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                     guard let data = data else { return }
+                     DispatchQueue.main.async {
+                         self.data = data
+                     }
+                 }
+                 task.resume()
+             }
+             */
+            
+        let task = URLSession.shared.dataTask(with: prayerURL) { data, response, error in
+            
             // ERROR: Connection 3: received failure notification
             print("Hello2")
             if let error = error {
@@ -139,12 +155,13 @@ class Database: ObservableObject {
  */
             }
             else {
-                print("Hello, world!")
+                print("Hello, world! SAM!")
                 let htmlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
                 self.dailyPrayer = self.parsePrayer(html: htmlContent as String)
             }
         }
-        print("Hello, world!")
+        task.resume()
+        print("Hello, world! CADAWAS!")
     }
     
     func parsePrayer(html: String) -> [String] {
@@ -153,7 +170,7 @@ class Database: ObservableObject {
             let doc = try SwiftSoup.parse(html)
             let p = try doc.select("p")
             let a = try doc.select("a")
-            prayer[0] = try p[2].text()
+            prayer[0] = try p[0].text()
             prayer[1] = try "\(a[37].text()) \(a[38].text())"
             print("Case1")
         } catch Exception.Error(type: let type, Message: let message) {
