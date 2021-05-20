@@ -67,6 +67,7 @@ struct TabsView: View {
             self.db.getDayNumber()
             self.db.getCafeMenu()
             self.db.getRegularMenu()
+            self.db.getPrayerRequest()
         }
         .accentColor(yColor)
         .edgesIgnoringSafeArea(.all)

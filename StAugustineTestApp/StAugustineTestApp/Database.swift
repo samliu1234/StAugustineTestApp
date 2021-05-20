@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import SwiftSoup
 import os.log
 
 class Database: ObservableObject {
@@ -21,6 +22,10 @@ class Database: ObservableObject {
     // Cohort / Day
     var dayNumber = ""
     var snowDayLabel = ""
+    
+    // Prayer
+    let prayerURL = URL(string: "https://www.biblegateway.com/")
+    var dailyPrayer = ["b", "b"]
     
     @Published var showSnowDayLabel = false
     @Published var showDayNumber = false
@@ -81,6 +86,7 @@ class Database: ObservableObject {
         }
     }
     
+    // MARK: Get Cafe Menu
     func getCafeMenu() {
         db.collection("info").document("cafMenu").getDocument { (snap, err) in
             if let err = err {
@@ -99,6 +105,7 @@ class Database: ObservableObject {
         }
     }
     
+    // MARK: Get Regular Menu
     func getRegularMenu() {
         db.collection("info").document("cafMenuRegular").getDocument { (snap, err) in
             if let err = err {
@@ -115,6 +122,51 @@ class Database: ObservableObject {
                 self.regularMenu = tempMenu.sorted( by: { $0.0 < $1.0 } )
             }
         }
+    }
+    
+    // MARK: Get Prayer Request
+    func getPrayerRequest() {
+        URLSession.shared.dataTask(with: self.prayerURL!) { (data, response, error) in
+            // THIS PRINT STATEMENT DOESN'T WORK, LIKELY MEANING A URL ERROR
+            // ERROR: Connection 3: received failure notification
+            print("Hello2")
+            if let error = error {
+                print("Error1: "+error.localizedDescription)
+                self.dailyPrayer = ["No internet connection", "Cannot find daily prayer"]
+                /*
+                let alert = UIAlertController(title: "Error in retrieving prayer", message: "Please try again later", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+ */
+            }
+            else {
+                print("Hello, world!")
+                let htmlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
+                self.dailyPrayer = self.parsePrayer(html: htmlContent as String)
+            }
+        }
+        print("Hello, world!")
+    }
+    
+    func parsePrayer(html: String) -> [String] {
+        var prayer = ["a", "a"]
+        do {
+            let doc = try SwiftSoup.parse(html)
+            let p = try doc.select("p")
+            let a = try doc.select("a")
+            prayer[0] = try p[2].text()
+            prayer[1] = try "\(a[37].text()) \(a[38].text())"
+            print("Case1")
+        } catch Exception.Error(type: let type, Message: let message) {
+            print(type)
+            print(message)
+            print("Case2")
+            prayer = ["Error", "Error"]
+        } catch {
+            print("Error")
+            print("Case3")
+            prayer = ["Error", "Error"]
+        }
+        return prayer
     }
 
 }

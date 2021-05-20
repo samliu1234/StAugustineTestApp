@@ -196,11 +196,11 @@ struct HomePageView: View {
                                 .padding(.bottom, 10)
                             
                             VStack(spacing: 20) {
-                                Text("Verse of the Day")
+                                Text(db.dailyPrayer[0])
                                     .bold()
                                     .foregroundColor(pColor)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("The Bible is cool!")
+                                Text(db.dailyPrayer[1])
                                     .font(.body)
                                     .foregroundColor(pColor)
                                     .frame(maxWidth: .infinity, alignment: .leading)
