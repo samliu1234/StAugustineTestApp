@@ -214,7 +214,6 @@ struct HomePageView: View {
                             
                         }
                 
-                        
                         // Properties for chaplaincy corner
                         .padding(.all, 25)
                         .overlay(

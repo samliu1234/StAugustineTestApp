@@ -36,8 +36,8 @@
 		563E0A76261922BD00B30722 /* SpiritMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E0A75261922BD00B30722 /* SpiritMeter.swift */; };
 		5646F5A325ED921600B7DBAA /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646F5A225ED921600B7DBAA /* BackButton.swift */; };
 		5651354225F415C400146111 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5651354125F415C400146111 /* ViewModifier.swift */; };
+		56570C7F2656F5CE00042124 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56570C7E2656F5CE00042124 /* GoogleService-Info.plist */; };
 		565BAB0B2646EDE80038178B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BAB0A2646EDE80038178B /* AppDelegate.swift */; };
-		565BAB112646F57A0038178B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 565BAB102646F57A0038178B /* GoogleService-Info.plist */; };
 		565C311F25C0CDD200796043 /* CafeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C311E25C0CDD200796043 /* CafeItem.swift */; };
 		5669D72625BA5EF90008FAB5 /* SongRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */; };
 		56DA31CB25E486D300ECF81D /* FAQViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA31CA25E486D300ECF81D /* FAQViewObject.swift */; };
@@ -98,8 +98,8 @@
 		563E0A75261922BD00B30722 /* SpiritMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritMeter.swift; sourceTree = "<group>"; };
 		5646F5A225ED921600B7DBAA /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		5651354125F415C400146111 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		56570C7E2656F5CE00042124 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		565BAB0A2646EDE80038178B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		565BAB102646F57A0038178B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		565C311E25C0CDD200796043 /* CafeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeItem.swift; sourceTree = "<group>"; };
 		5669D72525BA5EF90008FAB5 /* SongRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRequestObject.swift; sourceTree = "<group>"; };
 		56DA31CA25E486D300ECF81D /* FAQViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewObject.swift; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 			children = (
 				5651354025F415AA00146111 /* Extensions */,
 				565C311A25C0CDA300796043 /* Objects */,
-				565BAB102646F57A0038178B /* GoogleService-Info.plist */,
 				34566C19254337F100D1156E /* Assets.xcassets */,
+				56570C7E2656F5CE00042124 /* GoogleService-Info.plist */,
 				349D182A254628C400AE981F /* AccountView.swift */,
 				5612930C25F67496000B3E64 /* AddSongView.swift */,
 				349860FC25604959009ED45A /* Announcements.swift */,
@@ -185,6 +185,7 @@
 				3498610125604AA0009ED45A /* Database.swift */,
 				56DA31D225E4871200ECF81D /* FAQView.swift */,
 				34566C482543382D00D1156E /* HomePageView.swift */,
+				7D67EF3B2655E570009B939A /* ImageLoader.swift */,
 				56E88B042627641900DBF6C3 /* JoinClubView.swift */,
 				34566C1E254337F100D1156E /* Persistence.swift */,
 				3469A6A525F4339500215CB2 /* Settings.swift */,
@@ -197,7 +198,6 @@
 				34566C23254337F100D1156E /* Info.plist */,
 				34566C20254337F100D1156E /* StAugustineTestApp.xcdatamodeld */,
 				34566C1B254337F100D1156E /* Preview Content */,
-				7D67EF3B2655E570009B939A /* ImageLoader.swift */,
 			);
 			path = StAugustineTestApp;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 			files = (
 				34566C1D254337F100D1156E /* Preview Assets.xcassets in Resources */,
 				34566C1A254337F100D1156E /* Assets.xcassets in Resources */,
-				565BAB112646F57A0038178B /* GoogleService-Info.plist in Resources */,
+				56570C7F2656F5CE00042124 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

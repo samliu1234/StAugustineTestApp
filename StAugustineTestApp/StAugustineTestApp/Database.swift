@@ -126,64 +126,72 @@ class Database: ObservableObject {
     // MARK: Get Prayer Request
     func getPrayerRequest() {
         guard let prayerURL = URL(string: "https://www.biblegateway.com/") else { return }
-        print("Just before open")
-        //URLSession.shared.dataTask(with: prayerURL) { (data, response, error) in
-            // THIS PRINT STATEMENT DOESN'T WORK, LIKELY MEANING A URL ERROR
-          /*
-             init(urlString:String) {
-                 guard let url = URL(string: urlString) else { return }
-                 let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                     guard let data = data else { return }
-                     DispatchQueue.main.async {
-                         self.data = data
-                     }
-                 }
-                 task.resume()
-             }
-             */
-            
         let task = URLSession.shared.dataTask(with: prayerURL) { data, response, error in
-            
-            // ERROR: Connection 3: received failure notification
-            print("Hello2")
             if let error = error {
                 print("Error1: "+error.localizedDescription)
                 self.dailyPrayer = ["No internet connection", "Cannot find daily prayer"]
-                /*
-                let alert = UIAlertController(title: "Error in retrieving prayer", message: "Please try again later", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
- */
             }
             else {
-                print("Hello, world! SAM!")
                 let htmlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!
                 self.dailyPrayer = self.parsePrayer(html: htmlContent as String)
             }
         }
         task.resume()
-        print("Hello, world! CADAWAS!")
     }
     
-    func parsePrayer(html: String) -> [String] {
+    // MARK: Parse Prayer from Website
+    private func parsePrayer(html: String) -> [String] {
         var prayer = ["a", "a"]
         do {
             let doc = try SwiftSoup.parse(html)
-            let p = try doc.select("p")
-            let a = try doc.select("a")
-            prayer[0] = try p[0].text()
-            prayer[1] = try "\(a[37].text()) \(a[38].text())"
-            print("Case1")
+            let verse: Element = try doc.getElementById("verse-text")!
+            let ref: Element = try doc.getElementsByClass("citation").first()!
+            prayer[0] = try verse.text()
+            prayer[1] = try ref.text()
         } catch Exception.Error(type: let type, Message: let message) {
             print(type)
             print(message)
-            print("Case2")
             prayer = ["Error", "Error"]
         } catch {
             print("Error")
-            print("Case3")
             prayer = ["Error", "Error"]
         }
         return prayer
+    }
+    
+    // MARK: Parse News
+    func getNewsRequest() {
+        guard let news = URL(string: "https://staugustinechs.ca/printable/") else { return }
+        let task = URLSession.shared.dataTask(with: news) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            else {
+                let htmlContent = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
+                self.parseNews(html: htmlContent)
+            }
+        }
+        task.resume()
+    }
+    
+    private func parseNews(html: String) {
+        do {
+            print("Start")
+            let doc: Document = try SwiftSoup.parse(html)
+            print(try doc.body())
+            let div = try doc.getElementById("ancmnt")
+            print(div!.children().count)
+            
+            let tr = try doc.getElementsByTag("table")
+            print(tr.count)
+           
+        } catch Exception.Error(type: let type, Message: let message) {
+            print(type)
+            print(message)
+        } catch {
+            print("Error")
+        }
     }
 
 }

@@ -68,6 +68,7 @@ struct TabsView: View {
             self.db.getCafeMenu()
             self.db.getRegularMenu()
             self.db.getPrayerRequest()
+            self.db.getNewsRequest()
         }
         .accentColor(yColor)
         .edgesIgnoringSafeArea(.all)
